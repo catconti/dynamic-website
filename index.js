@@ -1,7 +1,8 @@
 var express = require('express');
 var app = express();
 
-app.use(express.static('my-personal-site'));
+app.use('/public/css',express.static('css'));
+app.use('/public/img',express.static('img'));
 
 app.get('/', function(req,res) {
 	res.sendFile(__dirname + '/index.html');
